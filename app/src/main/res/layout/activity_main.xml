@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mrbuknahsty.androump.MainActivity"
+    android:background="@android:color/holo_green_dark">
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusHomeScoreBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusHomeScoreBtn"
+        android:layout_below="@+id/plusHomeScoreBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeScoreTV"
+        android:layout_alignTop="@+id/plusHomeScoreBtn"
+        android:layout_toRightOf="@+id/plusHomeScoreBtn"
+        android:layout_alignBottom="@+id/minusHomeScoreBtn"
+        android:width="110dp"
+        android:textSize="75sp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/awayScoreTV"
+        android:width="110dp"
+        android:layout_alignTop="@+id/plusAwayScoreBtn"
+        android:layout_toLeftOf="@+id/plusAwayScoreBtn"
+        android:layout_toStartOf="@+id/plusAwayScoreBtn"
+        android:layout_alignBottom="@+id/homeScoreTV"
+        android:textSize="75sp"
+        android:textAlignment="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusAwayScoreBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusAwayScoreBtn"
+        android:layout_alignBottom="@+id/awayScoreTV"
+        android:layout_alignLeft="@+id/plusAwayScoreBtn"
+        android:layout_alignStart="@+id/plusAwayScoreBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusInningBtn"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/homeScoreTV"
+        android:layout_alignLeft="@+id/homeScoreTV"
+        android:layout_alignStart="@+id/homeScoreTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/inningNumTV"
+        android:layout_alignTop="@+id/minusInningBtn"
+        android:layout_centerHorizontal="true"
+        android:height="75dp"
+        android:width="100dp"
+        android:textSize="55sp"
+        android:textAlignment="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusInningBtn"
+        android:layout_alignTop="@+id/inningNumTV"
+        android:layout_toRightOf="@+id/plusBallsBtn"
+        android:layout_toEndOf="@+id/plusBallsBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Balls :"
+        android:id="@+id/ballsTV"
+        android:layout_above="@+id/plusStrikeBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Strikes :"
+        android:id="@+id/strikesTV"
+        android:layout_above="@+id/plusOutsBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Outs :"
+        android:id="@+id/outsTV"
+        android:layout_marginBottom="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/strikesTV"
+        android:layout_alignEnd="@+id/strikesTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/ballsNumTV"
+        android:layout_alignTop="@+id/ballsTV"
+        android:layout_alignBottom="@+id/ballsTV"
+        android:layout_alignLeft="@+id/inningNumTV"
+        android:layout_alignStart="@+id/inningNumTV"
+        android:layout_toLeftOf="@+id/awayScoreTV"
+        android:layout_toStartOf="@+id/awayScoreTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/strikesNumTV"
+        android:layout_alignTop="@+id/strikesTV"
+        android:layout_alignLeft="@+id/ballsNumTV"
+        android:layout_alignStart="@+id/ballsNumTV"
+        android:layout_toLeftOf="@+id/awayScoreTV"
+        android:layout_toStartOf="@+id/awayScoreTV"
+        android:layout_alignBottom="@+id/strikesTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/outsNumTV"
+        android:layout_alignTop="@+id/outsTV"
+        android:layout_alignLeft="@+id/strikesNumTV"
+        android:layout_alignStart="@+id/strikesNumTV"
+        android:layout_toLeftOf="@+id/awayScoreTV"
+        android:layout_toStartOf="@+id/awayScoreTV"
+        android:layout_alignBottom="@+id/outsTV" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusBallsBtn"
+        android:layout_above="@+id/plusStrikeBtn"
+        android:layout_toRightOf="@+id/ballsNumTV"
+        android:layout_toEndOf="@+id/ballsNumTV" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusBallsBtn"
+        android:layout_above="@+id/minusStrikeBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusStrikeBtn"
+        android:layout_alignBottom="@+id/strikesNumTV"
+        android:layout_alignLeft="@+id/plusBallsBtn"
+        android:layout_alignStart="@+id/plusBallsBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusStrikeBtn"
+        android:layout_alignBottom="@+id/strikesNumTV"
+        android:layout_alignLeft="@+id/minusAwayScoreBtn"
+        android:layout_alignStart="@+id/minusAwayScoreBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusOutsBtn"
+        android:layout_alignBottom="@+id/outsNumTV"
+        android:layout_alignLeft="@+id/plusStrikeBtn"
+        android:layout_alignStart="@+id/plusStrikeBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusOutsBtn"
+        android:layout_alignBottom="@+id/plusOutsBtn"
+        android:layout_alignLeft="@+id/minusStrikeBtn"
+        android:layout_alignStart="@+id/minusStrikeBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Home "
+        android:id="@+id/homeNameTV"
+        android:layout_below="@+id/homeScoreTV"
+        android:layout_alignLeft="@+id/homeScoreTV"
+        android:layout_alignStart="@+id/homeScoreTV"
+        android:layout_alignRight="@+id/homeScoreTV"
+        android:layout_alignEnd="@+id/homeScoreTV"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Away"
+        android:id="@+id/awayNameTV"
+        android:layout_below="@+id/awayScoreTV"
+        android:layout_alignLeft="@+id/awayScoreTV"
+        android:layout_alignStart="@+id/awayScoreTV"
+        android:layout_alignRight="@+id/awayScoreTV"
+        android:layout_alignEnd="@+id/awayScoreTV"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Inning"
+        android:id="@+id/inningHeaderTV"
+        android:layout_below="@+id/inningNumTV"
+        android:layout_alignLeft="@+id/inningNumTV"
+        android:layout_alignStart="@+id/inningNumTV"
+        android:layout_alignRight="@+id/inningNumTV"
+        android:layout_alignEnd="@+id/inningNumTV"
+        android:textAlignment="center" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondCB"
+        android:layout_marginTop="42dp"
+        android:checked="false"
+        android:layout_below="@+id/inningHeaderTV"
+        android:layout_centerHorizontal="true"
+        android:text="Second"
+        android:buttonTint="@color/atBat"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstCB"
+        android:checked="false"
+        android:layout_marginBottom="107dp"
+        android:layout_above="@+id/homeCB"
+        android:layout_alignRight="@+id/plusBallsBtn"
+        android:layout_alignEnd="@+id/plusBallsBtn"
+        android:text="First"
+        android:buttonTint="@color/atBat"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdCB"
+        android:layout_alignBottom="@+id/firstCB"
+        android:layout_toRightOf="@+id/minusInningBtn"
+        android:layout_toEndOf="@+id/minusInningBtn"
+        android:checked="false"
+        android:text="Third"
+        android:buttonTint="@color/atBat"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeCB"
+        android:layout_above="@+id/plusBallsBtn"
+        android:layout_alignLeft="@+id/secondCB"
+        android:layout_alignStart="@+id/secondCB"
+        android:checked="false"
+        android:contextClickable="false"
+        android:clickable="false"
+        android:enabled="false"
+        android:background="@color/black"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="single"
+        android:id="@+id/singleBtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double"
+        android:id="@+id/doubleBtn"
+        android:layout_below="@+id/singleBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triple"
+        android:id="@+id/tripleBtn"
+        android:layout_below="@+id/doubleBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
